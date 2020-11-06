@@ -3,7 +3,6 @@ import pywikibot
 site = pywikibot.Site('zh','wikipedia')
 site_en = pywikibot.Site('en','wikipedia')
 
-
 projs = ['Astronomy','physics','chemicals','Chemistry','mathematics','Extinction','electronic','Geology','Computer science','taxonomic','Biology','medicine','meteorology','Environment','Ecology']
 projzh = ['天文','物理学','化学物质','化学','数学','灭绝','电子学','地質','电脑和信息技术','生物','生物学','医学','气象','环境','生态']
 imps = ['Top','High','Mid','Low','Bottom','No','Unknown']
@@ -40,13 +39,11 @@ for p in range(len(projs)):
 		if(i<2): 
 			v2+=cat.categoryinfo['pages']+cat1.categoryinfo['pages']
 			v2zh+=catzh.categoryinfo['pages']
-			#print(catzh.categoryinfo['pages'])
 		v3+=cat.categoryinfo['pages']+cat1.categoryinfo['pages']
 		v3zh+=catzh.categoryinfo['pages']
 	dats.append([v1,v2,v3,v1zh,v2zh,v3zh,'n','n','n','n','n',count])
 	print(dats[-1])
 	count+=1
-	#print("=====")
 
 print("c1")
 for i in range(len(dats)):
@@ -83,10 +80,7 @@ for i in range(8):
 
 print("c4")
 for i in range(len(dats)):
-	#print(i)
-	#print(dats[0][-1],dats[0][3],dats[0][5],dats[0][0],dats[0][2])
 	for j in range(len(dats)-i-1):
-		#print(dats[j+1][-1],dats[j+1][3],dats[j+1][5],dats[j+1][0],dats[j+1][2])
 		if (dats[j][3]/dats[j][5])/(dats[j][0]/dats[j][2])>(dats[j+1][3]/dats[j+1][5])/(dats[j+1][0]/dats[j+1][2]):
 			dats[j],dats[j+1] = dats[j+1],dats[j]
 
@@ -101,7 +95,6 @@ for i in range(len(dats)):
 		if dats[j][-1]>dats[j+1][-1]:
 			dats[j],dats[j+1] = dats[j+1],dats[j]
 
-
 page = pywikibot.Page(site, u"User:和平奮鬥救地球/自然科學條目提升計劃/表格整理/B")
 
 writestr=""
@@ -115,6 +108,7 @@ for i in range(len(dats)):
 	writestr += "}}\n"
 
 writestr+="|}\n</center>\n<center><small>本表格由[[User:和平奮鬥救地球]]製作整理，[[User:和平奮鬥救地球/自然科學條目提升計劃|歡迎轉載]]。英文數據最後更新時間：~~~~~"
+writestr += '\n<noinclude><references group="註"/></noinclude>'
 page.text = writestr
 page.save(u"使用[[mw:Manual:Pywikibot/zh|Pywikibot]]更新數據")
 
