@@ -107,7 +107,7 @@ for i in range(len(dats)):
 	if(projzh[i]=='生物'): writestr+="|note=<ref group=\"註\">不包括英文維基[[:en:WP:TOL|生物專題]]之龐大的子專題（人體解剖學、分子與細胞生物學；魚類、昆蟲、真菌；等等）系統；其中[[:en:WP:MCB|分子與細胞生物學]]或是中文維基百科最薄弱之類別。</ref>"
 	writestr += "}}\n"
 
-writestr+="|}\n</center>\n<center><small>本表格由[[User:和平奮鬥救地球]]製作整理，[[User:和平奮鬥救地球/自然科學條目提升計劃|歡迎轉載]]。英文數據最後更新時間：~~~~~"
+writestr+="|}\n</center>\n<center><small>本表格由[[User:和平奮鬥救地球]]製作整理，[[User:和平奮鬥救地球/科學條目提升計劃|歡迎轉載]]。英文數據最後更新時間：~~~~~"
 writestr += '\n<noinclude><references group="註"/></noinclude>'
 page.text = writestr
 page.save(u"使用[[mw:Manual:Pywikibot/zh|Pywikibot]]更新數據")
