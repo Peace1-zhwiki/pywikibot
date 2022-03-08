@@ -26,10 +26,10 @@ gen_mid = pagegenerators.CategorizedPageGenerator(cat_mid, recurse=True)
 writestr = '物理專題待撰條目（英文B級且中重要度以上、少於20,000位元組；中文小於3,000位元組）：\n\n'
 writestr += '最後更新時間：~~~~~\n\n'
 
-writestr += '== 已有中文對應條目 =='
+writestr += '== 已有中文對應條目 ==\n'
 writestr += '{| class="wikitable sortable"\n|+ 已有中文對應條目\n! 英文條目名 !! 中文條目名 !! 品質 !! 重要度 !! 英文頁面長度（位元組） !! 中文頁面長度（位元組）\n'
 
-writestr1 = '== 尚無中文對應條目 =='
+writestr1 = '\n== 尚無中文對應條目 ==\n'
 writestr1 += '{| class="wikitable sortable"\n|+ 尚無中文對應條目\n! 英文條目名 !! 品質 !! 重要度 !! 英文頁面長度（位元組）\n'
 
 
