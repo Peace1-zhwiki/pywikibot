@@ -5,7 +5,7 @@ siteen = pywikibot.Site('en','wikipedia')
 sitezh = pywikibot.Site('zh','wikipedia')
 
 projname = 'physics'
-projname_qual = projname + ' vital'
+projname_qual = projname
 projname_impo = projname
 projnamezh = '[[WikiProject:物理学|物理專題]]'
 en_maxsize = 20000 #20000
